@@ -104,6 +104,9 @@ export class BriquesPoster extends LitElement {
     .speakerface img{
       max-width:80%;
       max-height:80%;
+      border-radius: 50%;
+      border: 10px solid white;
+      background-color: white;
     }
 
     .speakerinfo{
@@ -144,15 +147,15 @@ export class BriquesPoster extends LitElement {
         <div class="right-side">
           <div class="title">
             <h5>Design Systems, autonomie et créativité</h5>
-            <h6>Retour d'expérience de Decathlon</h6>
+            <h5>Retour d'expérience de Decathlon</h5>
           </div>
           <div class="speaker">
             <div class="speakerface">
               <img src="assets/speakers/laurent_thiebault.png">
             </div>
             <div class="speakerinfo">
-              <h6>Laurent Thiebault</h6>
-              <h6>@lauthieb</h6>
+              <h5>Laurent Thiebault</h5>
+              <h5>@lauthieb</h5>
             </div>
           </div>
           <div class="twitch">
