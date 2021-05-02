@@ -8,14 +8,15 @@ export class BriquesPoster extends LitElement {
 
   static styles = css`
 
-    h2, h3, h4{
+    h2, h3, h4, h5, h6, h7{
       margin: 0;
       padding: 0;
     }
 
     :host {
+      text-align: center;
       font-size : 5rem;
-      font-family: Chawp;
+      font-family: "Comic Sans MS", "Comic Sans", cursive;
       color: white;
 
       display: inline-block;
@@ -24,6 +25,7 @@ export class BriquesPoster extends LitElement {
       background-image: url("assets/brick5.jpeg");
       background-repeat: repeat;
       background-size: auto;
+      opacity:0.9;
     }
 
     main {
@@ -40,10 +42,8 @@ export class BriquesPoster extends LitElement {
 
     .right-side{
       flex: 0 0 60%;
-
-      background-color : green;
-      opacity: 0.5;
-
+      display:flex;
+      flex-direction: column;
     }
 
     .logo{
@@ -69,21 +69,58 @@ export class BriquesPoster extends LitElement {
       display:flex;
       align-items: center;
       justify-content: center;
-
     }
 
     .when{
       flex: 0 0 70%;
     }
 
-    .when h3{
-      text-align: center
-    }
-
     .when .space{
       margin-top:5%;
     }
 
+    .title{
+      flex: 0 0 40%;
+
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .speaker{
+      flex: 0 0 30%;
+      display:flex;
+      flex-direction:row;
+    }
+
+    .speakerface{
+      flex: 0 0 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .speakerface img{
+      max-width:80%;
+      max-height:80%;
+    }
+
+    .speakerinfo{
+      flex: 0 0 70%;
+
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .twitch{
+      flex: 0 0 30%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
   `;
 
   render() {
@@ -105,6 +142,22 @@ export class BriquesPoster extends LitElement {
 
         </div>
         <div class="right-side">
+          <div class="title">
+            <h5>Design Systems, autonomie et créativité</h5>
+            <h6>Retour d'expérience de Decathlon</h6>
+          </div>
+          <div class="speaker">
+            <div class="speakerface">
+              <img src="assets/speakers/laurent_thiebault.png">
+            </div>
+            <div class="speakerinfo">
+              <h6>Laurent Thiebault</h6>
+              <h6>@lauthieb</h6>
+            </div>
+          </div>
+          <div class="twitch">
+            <h6>https://www.twitch.tv/rdvspeakers</h6>
+          </div>
 
         </div>
       </main>
