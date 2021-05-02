@@ -4,12 +4,17 @@ import {customElement, property} from 'lit/decorators.js';
 @customElement("briques-poster")
 export class BriquesPoster extends LitElement {
 
-  @property() title = 'My app';
+  @property() title = 'Brique du Web';
 
   static styles = css`
     :host {
-      width: 2400px;
-      height: 1260px;
+      display: inline-block;
+      width: 1920px;
+      height: 1080px;
+      background-image: url("assets/brick5.jpeg");
+      background-repeat: repeat;
+      background-size: auto;
+
     }
 
     main {
