@@ -15,7 +15,7 @@ export class BriquesPoster extends LitElement {
 
     :host {
       text-align: center;
-      font-size : 5rem;
+      font-size : 6rem;
       font-family: "Comic Sans MS", "Comic Sans", cursive;
       color: white;
 
@@ -138,8 +138,8 @@ export class BriquesPoster extends LitElement {
                   <h2>S01E04</h2>
                 </div>
                 <div class="when">
-                    <h3 class="space">Mardi 27/04</h3>
-                    <h3>12h15</h3>
+                    <h4 class="space">Mardi 27/04</h4>
+                    <h4>12h15</h4>
                 </div>
             </div>
 
@@ -147,7 +147,7 @@ export class BriquesPoster extends LitElement {
         <div class="right-side">
           <div class="title">
             <h5>Design Systems, autonomie et créativité</h5>
-            <h5>Retour d'expérience de Decathlon</h5>
+            <h6>Retour d'expérience de Decathlon</h6>
           </div>
           <div class="speaker">
             <div class="speakerface">
