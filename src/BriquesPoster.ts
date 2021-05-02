@@ -8,6 +8,8 @@ export class BriquesPoster extends LitElement {
 
   static styles = css`
     :host {
+      width: 2400px;
+      height: 1260px;
     }
 
     main {
