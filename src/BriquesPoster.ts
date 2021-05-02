@@ -1,13 +1,17 @@
 import {LitElement, html, css} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
-import speaker from '../assets/speaker.json';
+import { speaker } from './speaker';
 
 @customElement("briques-poster")
 export class BriquesPoster extends LitElement {
 
-  @property() title = 'Briques du Web';
-
   @property() episode = speaker.episode;
+
+  @property() time = speaker.time;
+
+  @property() date = speaker.date;
+
+  @property() speaker = speaker;
 
   render() {
     return html`
@@ -18,27 +22,27 @@ export class BriquesPoster extends LitElement {
             </div>
             <div class="whichwhen">
                 <div class="which">
-                  <h2>${this.episode}</h2>
+                  <h2>${this.speaker.episode}</h2>
                 </div>
                 <div class="when">
-                    <h4 class="space">Mardi 27/04</h4>
-                    <h4>12h15</h4>
+                    <h4 class="space">${this.speaker.date}</h4>
+                    <h4>${this.speaker.time}</h4>
                 </div>
             </div>
 
         </div>
         <div class="right-side">
           <div class="title">
-            <h5>Design Systems, autonomie et créativité</h5>
-            <h6>Retour d'expérience de Decathlon</h6>
+            <h5>${this.speaker.title}</h5>
+            <h6>${this.speaker.subtitle}</h6>
           </div>
           <div class="speaker">
             <div class="speakerface">
-              <img src="assets/speakers/laurent_thiebault.png">
+              <img src="assets/speakers/${this.speaker.image}">
             </div>
             <div class="speakerinfo">
-              <h5>Laurent Thiebault</h5>
-              <h5>@lauthieb</h5>
+              <h5>${this.speaker.name}</h5>
+              <h5>${this.speaker.twitter}</h5>
             </div>
           </div>
           <div class="twitch">
