@@ -10,36 +10,138 @@
 
   <style>
     @font-face {
-      font-family: "Chawp";
-      src: url("assets/chawp.ttf") format("truetype");
-    }
-
-    @font-face {
-      font-family: "aleo";
-      src: url("assets/aleo-regular-webfont.ttf") format("truetype");
-    }
-
-    @font-face {
       font-family: "Snowy_Night";
       src: url("assets/Snowy_Night.ttf") format("truetype");
     }
 
-    @font-face {
-      font-family: "Cutie_Shark";
-      src: url("assets/Cutie_Shark.ttf") format("truetype");
-    }
-
-
-
-    html,
-    body {
-      width: 1920px;
-      height: 1080px;
+    html {
+      width: 100%;
+      height: 100%;
       margin: 0;
       padding: 0;
-      /*font-family: sans-serif;*/
-      /*background-color: #ededed;*/
     }
+
+    body{
+      width: 1920px;
+      height: 1080px;
+    }
+
+    h2, h3, h4, h5, h6{
+      margin: 0;
+      padding: 0;
+    }
+
+    briques-poster {
+      text-align: center;
+      font-size : 6rem;
+      font-family : Snowy_Night;
+      color: white;
+
+      display: inline-block;
+      width: 1920px;
+      height: 1080px;
+      background-image: url("assets/brick5.jpeg");
+      background-repeat: repeat;
+      background-size: auto;
+    }
+
+    main {
+      display: flex;
+      width: 100%;
+      height:100%;
+    }
+
+    .left-side{
+      flex: 0 0 40%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right-side{
+      flex: 0 0 60%;
+      display:flex;
+      flex-direction: column;
+    }
+
+    .logo{
+      flex: 0 0 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img{
+      width:80%;
+      object-fit:contain;
+    }
+
+    .whichwhen{
+      flex: 0 0 50%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .which{
+      flex: 0 0 30%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .when{
+      flex: 0 0 70%;
+    }
+
+    .when .space{
+      margin-top:5%;
+    }
+
+    .title{
+      flex: 0 0 40%;
+
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .speaker{
+      flex: 0 0 30%;
+      display:flex;
+      flex-direction:row;
+    }
+
+    .speakerface{
+      flex: 0 0 30%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .speakerface img{
+      max-width:80%;
+      max-height:80%;
+      border-radius: 50%;
+      border: 10px solid white;
+      background-color: white;
+    }
+
+    .speakerinfo{
+      flex: 0 0 70%;
+
+      display:flex;
+      flex-direction:column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .twitch{
+      flex: 0 0 30%;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+
   </style>
   <title>briques-posters</title>
 </head>
@@ -48,11 +150,23 @@
   <briques-poster></briques-poster>
 
   <script type="module" src="./out-tsc/src/BriquesPoster.js"></script>
-  <script src="assets/html2canvas.min.js"></script>
+  <script type="module" src="./out-tsc/src/CanvasStuff.js"></script>
+  <script src="assets/dom-to-image.min.js"></script>
   <script>
-    html2canvas(document.body).then(canvas => {
-      document.body.appendChild(canvas)
-    });
+    setTimeout(() => {
+      domtoimage.toPng(document.body)
+        // @ts-ignore 😬
+        .then((dataUrl) => {
+          const img = new Image();
+          img.src = dataUrl;
+          document.body.appendChild(img);
+        })
+        // @ts-ignore 😬
+        .catch((error) => {
+          console.error('oops, something went wrong!', error);
+        });
+
+    }, 1000);
   </script>
 </body>
 

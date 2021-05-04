@@ -1,6 +1,5 @@
 import merge from 'deepmerge';
 import copy from 'rollup-plugin-copy'
-import json from 'rollup-plugin-json';
 
 // use createSpaConfig for bundling a Single Page App
 import { createSpaConfig } from '@open-wc/building-rollup';
@@ -32,8 +31,7 @@ export default merge(baseConfig, {
       targets: [{ src: 'assets/**/*', dest: './dist/assets' }],
       // set flatten to false to preserve folder structure
       flatten: false,
-    }),
-    json()
+    })
   ],
 
   // alternatively, you can use your JS as entrypoint for rollup and
