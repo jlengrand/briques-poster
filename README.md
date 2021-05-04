@@ -7,7 +7,7 @@
 * Clone
 * `npm install && npm start`
 * Add a speaker image in `assets/speakers`
-* Update `speaker.ts` with the new info
+* Update [src/speaker.ts](src/speaker.ts) with the new info
 * Print, commit and push with the created poster in the `posters` folder
 
 ## Author
