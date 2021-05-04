@@ -2,6 +2,8 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f2f66a70-8de0-4468-855e-aa4d373fc556/deploy-status)](https://app.netlify.com/sites/briques-web/deploys)
 
+## [Generator](https://briques-web.netlify.app/)
+
 ## Quickstart
 
 * Clone
