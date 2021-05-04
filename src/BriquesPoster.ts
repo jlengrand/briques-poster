@@ -25,22 +25,25 @@ export class BriquesPoster extends LitElement {
               alt="logo des briques"
               src="assets/logo_color_text_square.png"
             />
+            <div>@LesBriquesDuWeb</div>
           </div>
+
           <div class="whichwhen">
             <div class="which">
               <h2>${this.speaker.episode}</h2>
             </div>
             <div class="when">
-              <h4 class="space">${this.speaker.date}</h4>
-              <h4>${this.speaker.time}</h4>
+              <h3>${this.speaker.date}</h3>
+              <h3>${this.speaker.time}</h3>
             </div>
           </div>
         </div>
         <div class="right-side">
           <div class="title">
-            <h5>${this.speaker.title}</h5>
-            <h6>${this.speaker.subtitle}</h6>
+            <h1>${this.speaker.title}</h1>
+            <h2>${this.speaker.subtitle}</h2>
           </div>
+
           <div class="speaker">
             <div class="speakerface">
               <img
@@ -48,13 +51,14 @@ export class BriquesPoster extends LitElement {
                 src="assets/speakers/${this.speaker.image}"
               />
             </div>
+
             <div class="speakerinfo">
-              <h5>${this.speaker.name}</h5>
-              <h5>${this.speaker.twitter}</h5>
+              <h1>${this.speaker.name}</h1>
+              <h2>${this.speaker.twitter}</h2>
             </div>
           </div>
           <div class="twitch">
-            <h6>https://www.twitch.tv/rdvspeakers</h6>
+            <h2>https://www.twitch.tv/rdvspeakers</h2>
           </div>
         </div>
       </main>
