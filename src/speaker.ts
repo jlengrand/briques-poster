@@ -1,14 +1,14 @@
 export const speaker = {
-  "episode" : "S01E04",
+  episode: 'S01E05',
 
-  "date" : "Mardi 27/04",
-  "time" : "12h15",
+  date: 'Mardi 11/05',
+  time: '12h15',
 
-  "title" : "Design Systems, autonomie et créativité",
-  "subtitle" : "Retour d'expérience de Decathlon",
+  title: 'Vers un web plus écologique',
+  subtitle: 'Écoconception et numérique responsable',
 
-  "name" : "Laurent Thiebault",
-  "twitter" : "@lauthieb",
+  name: 'Romuald Priol',
+  twitter: '@doc_roms',
 
-  "image": "laurent_thiebault.png"
+  image: 'romuald_priol.png',
 };
