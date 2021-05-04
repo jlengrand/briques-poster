@@ -64,7 +64,8 @@ export class BriquesPoster extends LitElement {
     :host {
       text-align: center;
       font-size : 6rem;
-      font-family: "Comic Sans MS", "Comic Sans", cursive;
+      // font-family: "Comic Sans MS", "Comic Sans", cursive;
+      font-family : Snowy_Night;
       color: white;
 
       display: inline-block;
@@ -73,7 +74,8 @@ export class BriquesPoster extends LitElement {
       background-image: url("assets/brick5.jpeg");
       background-repeat: repeat;
       background-size: auto;
-      opacity:0.9;
+      opacity:0.8;
+      filter: grayscale(25%);
     }
 
     main {

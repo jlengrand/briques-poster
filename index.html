@@ -14,6 +14,23 @@
       src: url("assets/chawp.ttf") format("truetype");
     }
 
+    @font-face {
+      font-family: "aleo";
+      src: url("assets/aleo-regular-webfont.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Snowy_Night";
+      src: url("assets/Snowy_Night.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Cutie_Shark";
+      src: url("assets/Cutie_Shark.ttf") format("truetype");
+    }
+
+
+
     html,
     body {
       width: 1920px;
@@ -31,6 +48,12 @@
   <briques-poster></briques-poster>
 
   <script type="module" src="./out-tsc/src/BriquesPoster.js"></script>
+  <script src="assets/html2canvas.min.js"></script>
+  <script>
+    html2canvas(document.body).then(canvas => {
+      document.body.appendChild(canvas)
+    });
+  </script>
 </body>
 
 </html>
