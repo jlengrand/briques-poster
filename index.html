@@ -201,14 +201,30 @@
 
     }
 
+    .generation {
+      padding: 2rem;
+      width: 100%;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      font-family : KOMTXTT_;
+    }
+
     .generate {
       width: 500px;
       font-size: 5rem;
       color: white;
       background-color: #800000;
       border-radius: 10px;
-      margin-bottom: 3rem;
       cursor: pointer;
+      font-family : KOMTXTT_;
+    }
+
+    .generating {
+      font-size: 5rem;
+      color: #aaa;
+      margin-left: 5rem;
+      display: none;
     }
 
     .spacer {
@@ -220,7 +236,10 @@
 </head>
 
 <body>
-  <button class="generate" onclick="generatePng()">Generate</button>
+  <div class="generation">
+    <button class="generate" onclick="generatePng()">Generate</button> 
+    <div class="generating">Generating...</div>
+  </div>
   <briques-poster id="poster"></briques-poster>
   <div class="spacer"></div>
 
@@ -230,12 +249,14 @@
   <script>
     let generatePng = () => {
       console.log('Generating...');
+      document.querySelector(".generating").style.display = "block";
       domtoimage.toPng(document.querySelector("#poster"))
         // @ts-ignore 😬
         .then((dataUrl) => {
           const img = new Image();
           img.src = dataUrl;
           document.body.appendChild(img);
+          document.querySelector(".generating").style.display = "none";
         })
         // @ts-ignore 😬
         .catch((error) => {
