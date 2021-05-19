@@ -1,14 +1,14 @@
 export const speaker = {
-  episode: 'S01E05',
+  episode: 'S01E06',
 
-  date: 'Mardi 11/05',
+  date: 'Mardi 25/05',
   time: '12h15',
 
-  title: 'Vers un web plus écologique',
-  subtitle: 'Écoconception et numérique responsable',
+  title: 'Sur les traces de sir Tim Berners-Lee',
+  subtitle: 'Une semaine pour récoder le premier navigateur',
 
-  name: 'Romuald Priol',
-  twitter: '@doc_roms',
+  name: 'Angela Ricci',
+  twitter: '@gericci',
 
-  image: 'romuald_priol.png',
+  image: 'angela_ricci.png',
 };
