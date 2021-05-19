@@ -10,5 +10,5 @@ export const speaker = {
   name: 'Angela Ricci',
   twitter: '@gericci',
 
-  image: 'angela_ricci.png',
+  image: 'angela_ricci.jpg',
 };
