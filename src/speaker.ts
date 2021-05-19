@@ -5,7 +5,7 @@ export const speaker = {
   time: '12h15',
 
   title: 'Sur les traces de Tim Berners-Lee',
-  subtitle: 'Une semaine pour récoder le premier navigateur',
+  subtitle: 'Une semaine au CERN pour récoder le premier navigateur',
 
   name: 'Angela Ricci',
   twitter: '@gericci',
