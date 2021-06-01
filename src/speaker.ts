@@ -1,14 +1,14 @@
 export const speaker = {
-  episode: 'S01E06',
+  episode: 'S01E07',
 
-  date: 'Mardi 25/05',
+  date: 'Mardi 08/06',
   time: '12h15',
 
-  title: 'Sur les traces de Tim Berners-Lee',
-  subtitle: 'Une semaine au CERN pour recréer le premier navigateur web',
+  title: "L'UX en entreprise : intranets et produits internes",
+  subtitle: 'Différences, avantages et frustrations',
 
-  name: 'Angela Ricci',
-  twitter: '@gericci',
+  name: 'Stéphanie Walter',
+  twitter: '@walterstephanie',
 
-  image: 'angela_ricci.jpg',
+  image: 'stephanie_walter_carre.png',
 };
